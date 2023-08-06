@@ -5,16 +5,6 @@
 
 }
 
-.imageCenterText{
-	text-align:center;
-	font-size:500%;
-	color:white;
-	position:absolute;
-	margin-top:auto;
-	margin-bottom:auto;
-}
-
-
 
 .bannerContainer{
 	position:relative;
@@ -35,8 +25,19 @@
 	text-shadow: 0px 3px black;
 }
 
+.bannerTextContainer > p{
+	text-align:center;
+	font-size:500%;
+	color:white;
+	position:absolute;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+
 #bannerImage{
 	width:100%;
+	height:100%;
 }
 
 
@@ -64,6 +65,13 @@
 		position:relative;
 }
 
+.keyboardContainer > div{
+		text-align:center;
+		font-size:30px;
+		color:white;
+		text-shadow: 0px 3px black;
+}
+
 .keyBlackContainer{
 		position:absolute;
 		left:28px;
@@ -73,25 +81,24 @@
 .hitbox1
 {
 	position:absolute;
-	border:2px solid black;
 	height:70px;
 	width:30px;
 	bottom:5px;
+	left:0px;
 }
 
 .hitbox2
 {
 	position:absolute;
-	border:2px solid black;
 	height:130px;
 	width:20px;
 	bottom:80px;
+	left:0px;
 }
 
 .hitbox3
 {
 	position:absolute;
-	border:2px solid black;
 	height:130px;
 	width:10px;
 	bottom:80px;
@@ -101,7 +108,6 @@
 .hitbox4
 {
 	position:absolute;
-	border:2px solid black;
 	height:130px;
 	width:20px;
 	bottom:80px;
@@ -124,7 +130,6 @@
 }
 
 .contentSlideshow{
-	border:1px solid black;
 	position:relative;
 	height:100%;
 	width:50em;
@@ -132,38 +137,42 @@
 	justify-content:center;
 }
 
-.contentSlideshow > img{
-
-}
-
 
 
 #slideshowRight{
-	position:absolute;
-	margin-top:45%;
-	right:0px;
-	border:1px solid black;
+	margin-top:auto;
+	margin-bottom:auto;
+
 }
 
 #slideshowLeft{
-	position:absolute;
-	margin-top:45%;
-	left:0px;
-	border:1px solid black;
+	margin-top:auto;
+	margin-bottom:auto;
+
 }
 
 #slideshowIndicator{
 	position:absolute;
-	bottom:0px;
+	bottom:0%;
+	height:1em;
+	width:6em;
+	display:flex;
+	justify-content:center;
 }
 
 #slideshowIndicator > span{
-	margin:10px;
-	height:10px;
-	width:10px;
-	border:2px solid black;
+	margin:0 0.5em;
+	height:1em;
+	width:1em;
 	border-radius:50%;
-	background-color:grey;
+	background-color:lightgrey;
+	flex:1;
+}
+
+
+
+.dotSelected{
+	background-color:grey !important;
 }
 
 #slideshowLeft > img{
@@ -177,8 +186,102 @@
 	height:5em;
 }
 
+#pianoWorksImage{
+	position:relative;
+	height:70%;
+	width:50em;
+}
+
+#pianoWorksBackground{
+	position:absolute;	
+	width:100%;
+}
+
+
+#pianoWorksKey{
+	position:absolute;	
+	width:90%;
+	top:240px;
+	left:90px;
+}
+
+#pianoWorksKeyPopup{
+	position:absolute;	
+	width:30%;
+	top:200px;
+	right:-100px;
+}
+
+#pianoWorksHammer{
+	position:absolute;
+	height:10px;
+	width:10px;
+	top:140px;
+	left:340px;
+	
+}
+
+#pianoWorksHammerPopup{
+	position:absolute;	
+	width:20%;
+	top:90px;
+	right:330px;
+}
+
+
+
+#pianoWorksHammer > img{
+	position:absolute;
+	right:-25px;
+	top:-25px;
+
+}
+
+/*Image needs to be offset from a div container's position so that it will rotate nicely around a pivot point rather then the center of the image*/
+
+#pianoWorksDamper{
+	position:absolute;
+	top:0px;
+	left:30px;
+	width:19%;
+	
+}
+
+#pianoWorksDamperPopup{
+	position:absolute;
+	top:-30px;
+	left:-80px;
+	width:20%;
+	
+}
+
+
+
+#pianoWorksDamperLever{
+	position:absolute;
+	top:270px;
+	left:30px;
+	height:10px;
+	width:10px;	
+}
+
+#pianoWorksDamperLever > img{
+	position:absolute;
+	top:-20px;
+	left:-4px;
+	
+}
+
+/*Image needs to be offset from a div container's position so that it will rotate nicely around a pivot point rather then the center of the image*/
+
+#pianoWorksDesc{
+	text-align:center;
+	height:30%;
+}
+
 .contentSub2{
 	height:80%;
+	display:block:
 }
 
 
@@ -186,6 +289,7 @@
 	flex:100%;
 	display:flex;
 	justify-content:center;
+	flex-wrap:wrap;
 	height:20%;
 	
 }
@@ -193,7 +297,9 @@
 .contentButtons > button{
 	flex:50%;
 	background-color:#d4ac8f;
-	
+	font-size:50px;
+	color:white;
+	text-shadow: 0px 3px black;
 }
 
 .contentButtons > button:hover{
@@ -227,16 +333,20 @@
 	margin-bottom:auto;
 	color:white;
 	text-align:center;
+	font-size:20px;
 	
 }
 
 
 .footerImage{
+	display:flex;
 	flex:2;
 }
 
 .footerImage > img {
-	margin:0 2em;
+	position:relative;
+	margin:0 4em;
+	height:50%;
 }
 
 #footerText{
@@ -246,5 +356,17 @@
 
 body{
 	background-color:#ecbf9f;
+	
+}
+
+@media screen and (max-width:800px)
+{
+	.footerImage > img {
+	margin:0 0;
+	}
+	
+	.contentButtons > button{
+	flex:100%;
+	}
 	
 }
